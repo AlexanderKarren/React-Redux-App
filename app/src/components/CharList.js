@@ -7,7 +7,9 @@ import './CharList.css'
 
 const CharList = props => {
     const [query, setQuery] = useState("");
-    useEffect(() => props.getData(), []);
+    const { getData } = props;
+
+    useEffect(() => getData(), [getData]);
 
     return (
         <div className="char-list">
@@ -30,7 +32,7 @@ const CharList = props => {
                         })
                     }
                 })
-                return (foundMatch && <CharCard character={character} />)
+                return (foundMatch && <CharCard key= {character.id} character={character} />)
             })}
         </div>
     )

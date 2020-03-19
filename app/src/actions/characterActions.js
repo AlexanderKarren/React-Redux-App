@@ -3,7 +3,6 @@ import axios from 'axios';
 export const START_FETCHING = "FETCH_DATA";
 export const UPDATE_LIST = "UPDATE_LIST";
 export const SET_ERROR = "SET_ERROR";
-export const UPDATE_QUERY = "UPDATE_QUERY";
 
 export const getData = () => dispatch => {
     dispatch({type: START_FETCHING});
@@ -16,8 +15,4 @@ export const getData = () => dispatch => {
         console.log(error);
         dispatch({type: SET_ERROR, payload: error})
     })
-}
-
-export const updateQuery = searchQuery => dispatch => {
-    dispatch({type: UPDATE_QUERY, payload:searchQuery})
 }

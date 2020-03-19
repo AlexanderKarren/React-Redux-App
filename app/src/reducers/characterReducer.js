@@ -1,4 +1,4 @@
-import { START_FETCHING, UPDATE_LIST, SET_ERROR, UPDATE_QUERY } from '../actions/characterActions'
+import { START_FETCHING, UPDATE_LIST, SET_ERROR } from '../actions/characterActions'
 
 export const initialState = {
     characters: [],
@@ -27,13 +27,6 @@ export const characterReducer = (state = initialState, action) => {
                 ...state,
                 isFetchingData: false,
                 error: `${action.payload}`
-            }
-        case UPDATE_QUERY:
-            console.log("got here");
-            return {
-                ...state,
-                characters: [...state.characters],
-                query: action.payload
             }
         default:
             return state;
