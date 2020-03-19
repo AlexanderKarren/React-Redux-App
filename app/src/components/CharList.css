@@ -1,0 +1,21 @@
+.char-list {
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    width:100%;
+    background-image: url("../new_mexico.jpg");
+    background-size:100%;
+    min-height:100vh;
+}
+
+.error {
+    color:red;
+}
+
+.dead {
+    color:red;
+}
+
+.alive {
+    color:green;
+}
